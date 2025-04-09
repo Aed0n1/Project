@@ -18,7 +18,7 @@
         <Button Content="Back to Main Menu" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" Click="BackButton_Click"/>
         
         <!-- Содержимое окна -->
-        <ContentControl Name="MainContent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        
 
         <!-- Кнопки для переключения контента -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Vertical">

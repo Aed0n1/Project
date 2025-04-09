@@ -22,11 +22,11 @@ namespace Project.Views
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        public void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // Найдем родительский Frame и заменим его контент на MainMenu
-            var mainWindow = (MainWindow)System.Windows.Application.Current.MainWindow;
-            mainWindow.MainContent.Content = new MainMenu();  // MainMenu - это наш основной UserControl
+            // Переключаемся на MainWindow
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.BackToMainWindow();
         }
     }
 }

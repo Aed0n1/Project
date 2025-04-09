@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Project.Views;
+using System.Windows;
 
 namespace Project
 {
@@ -7,27 +8,44 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+            // Устанавливаем начальное содержимое
+            //MainContent.Content = new MainWindow();
         }
 
-        private void AddListButton_Click(object sender, RoutedEventArgs e)
+        public void AddListButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new Views.AddListView();  // Загружаем AddListView в ContentControl
+            // При нажатии на кнопку "To Add a List" показываем AddListView
+            MainContent.Content = new AddListView();
+            ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
         }
 
         private void KKalButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new Views.KKalView();  // Загружаем KKalView в ContentControl
+            // При нажатии на кнопку "KKal" показываем KKalView
+            MainContent.Content = new KKalView();
+            ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
         }
 
-        private void QRScannerButton_Click(object sender, RoutedEventArgs e)
+        private void QRButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new Views.QRScannerView();  // Загружаем QRScannerView в ContentControl
+            // При нажатии на кнопку "QR-Code" показываем QRScannerView
+            MainContent.Content = new QRScannerView();
+            ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new Views.SettingsView();  // Загружаем SettingsView в ContentControl
+            // При нажатии на кнопку "Settings" показываем SettingsView
+            MainContent.Content = new SettingsView();
+            ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
+        }
+
+        // Метод для возврата на главную страницу
+        public void BackToMainWindow()
+        {
+            // Возвращаем кнопки обратно
+            ButtonPanel.Visibility = Visibility.Visible;
+            MainContent.Content = new MainWindow();
         }
     }
 }
-

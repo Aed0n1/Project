@@ -20,16 +20,12 @@ C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Project.genrunti
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\ref\Project.dll
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\App.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Styles\ButtonStyles.baml
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Pages\MainPage.g.cs
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Pages\MainPage.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\AddListView.g.cs
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\KKalView.g.cs
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\SettingsView.g.cs
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\QRScannerView.g.cs
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\MainMenu.g.cs
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\AddListView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\KKalView.baml
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\MainMenu.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\QRScannerView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\SettingsView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Project.sourcelink.json
