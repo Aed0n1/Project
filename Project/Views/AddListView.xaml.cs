@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Project.Views
+{
+    public partial class AddListView : UserControl
+    {
+        public AddListView()
+        {
+            InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // Найдем родительский Frame и заменим его контент на MainMenu
+            var mainWindow = (MainWindow)System.Windows.Application.Current.MainWindow;
+            mainWindow.MainContent.Content = new MainMenu();  // MainMenu - это наш основной UserControl
+        }
+    }
+}

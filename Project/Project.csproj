@@ -12,4 +12,13 @@
     <Resource Include="Images\**\*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Update="Images\background.JPG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Update="Images\logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
