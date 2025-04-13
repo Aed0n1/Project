@@ -45,7 +45,7 @@ namespace Project
         {
             // Возвращаем кнопки обратно
             ButtonPanel.Visibility = Visibility.Visible;
-            MainContent.Content = new MainWindow();
+            MainContent.Content = null;
         }
     }
 }
