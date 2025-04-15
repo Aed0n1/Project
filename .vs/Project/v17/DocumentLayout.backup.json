@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\alexn\\Desktop\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\qrscannerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\qrscannerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\kkalview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\kkalview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\qrscannerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\qrscannerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\kkalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\kkalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\addlistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\addlistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\addlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\addlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\settingsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\settingsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\settingsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\qrscannerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\qrscannerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +26,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KKalView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml.cs",
+              "RelativeDocumentMoniker": "Project\\Views\\KKalView.xaml.cs",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml.cs",
+              "RelativeToolTip": "Project\\Views\\KKalView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:03:16.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "KKalView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml",
+              "RelativeDocumentMoniker": "Project\\Views\\KKalView.xaml",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml",
+              "RelativeToolTip": "Project\\Views\\KKalView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-15T20:33:56.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "QRScannerView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\QRScannerView.xaml.cs",
               "RelativeDocumentMoniker": "Project\\Views\\QRScannerView.xaml.cs",
@@ -54,93 +63,19 @@
               "RelativeToolTip": "Project\\Views\\QRScannerView.xaml.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAmwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T20:18:21.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T20:18:21.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QRScannerView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\QRScannerView.xaml",
-              "RelativeDocumentMoniker": "Project\\Views\\QRScannerView.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\QRScannerView.xaml*",
-              "RelativeToolTip": "Project\\Views\\QRScannerView.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T20:18:19.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SettingsView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsView.xaml",
-              "RelativeDocumentMoniker": "Project\\Views\\SettingsView.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsView.xaml",
-              "RelativeToolTip": "Project\\Views\\SettingsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-13T18:44:37.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AddListView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml.cs",
               "RelativeDocumentMoniker": "Project\\Views\\AddListView.xaml.cs",
               "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml.cs",
               "RelativeToolTip": "Project\\Views\\AddListView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T12:26:38.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Project\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml",
-              "RelativeToolTip": "Project\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-13T12:24:52.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SettingsView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsView.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\Views\\SettingsView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsView.xaml.cs",
-              "RelativeToolTip": "Project\\Views\\SettingsView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T18:49:36.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddListView.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml",
-              "RelativeDocumentMoniker": "Project\\Views\\AddListView.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml",
-              "RelativeToolTip": "Project\\Views\\AddListView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-13T12:25:41.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\App.xaml",
-              "RelativeDocumentMoniker": "Project\\App.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\App.xaml",
-              "RelativeToolTip": "Project\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-13T12:25:26.338Z",
               "EditorCaption": ""
             }
           ]
