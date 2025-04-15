@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- Общие строки -->
+    <system:String x:Key="Back">Back</system:String>
+    <system:String x:Key="Settings">Settings</system:String>
+    
+    <!-- Настройки -->
+    <system:String x:Key="Theme">Theme</system:String>
+    <system:String x:Key="LightTheme">Light Theme</system:String>
+    <system:String x:Key="DarkTheme">Dark Theme</system:String>
+    <system:String x:Key="FontSize">Font Size</system:String>
+    <system:String x:Key="Language">Language</system:String>
+    <system:String x:Key="Small">Small</system:String>
+    <system:String x:Key="Medium">Medium</system:String>
+    <system:String x:Key="Large">Large</system:String>
+    
+    <!-- Главное меню -->
+    <system:String x:Key="AddList">To Add a List</system:String>
+    <system:String x:Key="KKal">KKal</system:String>
+    <system:String x:Key="QRCode">QR-Code</system:String>
+</ResourceDictionary> 

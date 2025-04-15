@@ -7,6 +7,61 @@
              mc:Ignorable="d" 
              d:DesignHeight="950" d:DesignWidth="800">
     <Grid>
-            
+
+        <!-- Фоновое изображение -->
+        <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
+
+        <!-- Круглый логотип без белого фона -->
+        <Ellipse Width="270" Height="270" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="580,-40,0,650">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="pack://application:,,,/Images/logo.png" Stretch="Uniform"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Button Content="Back to Main Menu" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
+
+        <!-- Содержимое окна -->
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <TextBox Name="ProductNumberTextBox"
+         Width="250"
+         Height="45"
+         FontSize="16"
+         Margin="0,0,0,15"
+         HorizontalContentAlignment="Center"
+         VerticalContentAlignment="Center"
+         PreviewTextInput="ProductNumberTextBox_PreviewTextInput"
+         MaxLength="10">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="BorderBrush" Value="#4CAF50"/>
+                        <Setter Property="BorderThickness" Value="2"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border CornerRadius="12"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ScrollViewer x:Name="PART_ContentHost"
+                                          Margin="0"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+
+            <Button Content="Add a product" Style="{StaticResource RoundedButton}"/>
+
+
+        </StackPanel>
+
     </Grid>
 </UserControl>

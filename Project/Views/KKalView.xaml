@@ -4,8 +4,22 @@
              xmlns:local="clr-namespace:Project.Views"
              Width="800" Height="950">
     <Grid>
-        <TextBlock Text="KKal View" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <!-- Тут будет весь контент для KKal -->
+
+        <!-- Фоновое изображение -->
+        <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
+
+        <!-- Круглый логотип без белого фона -->
+        <Ellipse Width="270" Height="270" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="580,-40,0,650">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="pack://application:,,,/Images/logo.png" Stretch="Uniform"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Button Content="Back to Main Menu" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
+
+        <!-- Содержимое окна -->
+
+
     </Grid>
 </UserControl>
 
