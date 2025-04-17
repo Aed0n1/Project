@@ -29,6 +29,4 @@ C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\KKalView.b
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\QRScannerView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\SettingsView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Project.sourcelink.json
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Resources\StringResources.en-US.baml
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Resources\StringResources.pl-PL.baml
-C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Resources\StringResources.ru-RU.baml
+C:\Users\alexn\Desktop\Project\Project\bin\Debug\net8.0-windows\Project.dll.config

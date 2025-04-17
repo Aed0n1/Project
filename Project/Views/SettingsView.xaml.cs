@@ -21,5 +21,11 @@ namespace Project.Views
         {
             InitializeComponent();
         }
+        public void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Переключаемся на MainWindow
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.BackToMainWindow();
+        }
     }
 }
