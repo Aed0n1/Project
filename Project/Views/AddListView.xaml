@@ -15,14 +15,12 @@
             </Ellipse.Fill>
         </Ellipse>
 
-        <Button Content="Back to Main Menu" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
-
-        <!-- Содержимое окна -->
+        <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
 
 
         <!-- Кнопки для переключения контента -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Vertical">
-            <Button Content="Add new list" Style="{StaticResource RoundedButton}"/>
+            <Button Content="{DynamicResource Add new list}" Style="{StaticResource RoundedButton}"/>
         </StackPanel>
     </Grid>
 </UserControl>

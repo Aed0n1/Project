@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+    <sys:String x:Key="BackToMainMenu">Powrót</sys:String>
+    <sys:String x:Key="Add new list">Dodaj nową listę</sys:String>
+    <sys:String x:Key="On this page you can find energy values of products">Na tej stronie znajdziesz wartości energetyczne produktów</sys:String>
+    <sys:String x:Key="Proteins (per 100g):">Białka (na 100g):</sys:String>
+    <sys:String x:Key="Fats (per 100g):">Tłuszcze (na 100g):</sys:String>
+    <sys:String x:Key="Carbohydrates (per 100g):">Węglowodany (na 100g):</sys:String>
+    <sys:String x:Key="Calories (per 100g):">Kalorie (na 100g):</sys:String>
+    <sys:String x:Key="Add a product">Dodaj produkt</sys:String>
+    <sys:String x:Key="Select Language">Wybierz język</sys:String>
+    <sys:String x:Key="To Add a List">Dodać listę</sys:String>
+    <sys:String x:Key="KKal">KKal</sys:String>
+    <sys:String x:Key="QR-Code">Kod QR</sys:String>
+    <sys:String x:Key="Settings">Ustawienia</sys:String>
+
+
+</ResourceDictionary>

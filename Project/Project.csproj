@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="Resources\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
 
 </Project>

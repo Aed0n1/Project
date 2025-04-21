@@ -113,7 +113,7 @@
                 <ImageBrush ImageSource="pack://application:,,,/Images/logo.png" Stretch="Uniform"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBlock Text="On this page you can find energy values of products"
+        <TextBlock Text="{DynamicResource On this page you can find energy values of products}"
            FontSize="28"
            FontWeight="SemiBold"
            Foreground="#006400"
@@ -127,7 +127,7 @@
             </TextBlock.Effect>
         </TextBlock>
 
-        <Button Content="Back to Main Menu" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
+        <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
 
 
         <!-- Содержимое окна -->
@@ -152,7 +152,7 @@
                 </ComboBox.Effect>
             </ComboBox>
 
-            <TextBlock Text="Белки (на 100г):" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
+            <TextBlock Text="{DynamicResource Proteins (per 100g):}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
             <TextBox Name="ProteinsBox" IsReadOnly="True" Margin="0,0,0,10"
              FontSize="14" Padding="8"
              Background="White" Foreground="Black"
@@ -162,7 +162,7 @@
                 </TextBox.Effect>
             </TextBox>
 
-            <TextBlock Text="Жиры (на 100г):" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
+            <TextBlock Text="{DynamicResource Fats (per 100g):}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
             <TextBox Name="FatsBox" IsReadOnly="True" Margin="0,0,0,10"
              FontSize="14" Padding="8"
              Background="White" Foreground="Black"
@@ -172,7 +172,7 @@
                 </TextBox.Effect>
             </TextBox>
 
-            <TextBlock Text="Углеводы (на 100г):" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
+            <TextBlock Text="{DynamicResource Carbohydrates (per 100g):}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
             <TextBox Name="CarbsBox" IsReadOnly="True" Margin="0,0,0,10"
              FontSize="14" Padding="8"
              Background="White" Foreground="Black"
@@ -182,7 +182,7 @@
                 </TextBox.Effect>
             </TextBox>
 
-            <TextBlock Text="Калории (на 100г):" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
+            <TextBlock Text="{DynamicResource Calories (per 100g):}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
             <TextBox Name="CaloriesBox" IsReadOnly="True" Margin="0,0,0,10"
              FontSize="14" Padding="8" 
              Background="White" Foreground="Black"

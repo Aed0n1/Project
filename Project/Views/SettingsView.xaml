@@ -3,12 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Project.Views"
              Width="800" Height="950">
-    <Grid>
+    <UserControl.Resources>
 
+        <!-- СТИЛЬ ЗАКРУГЛЕННОГО COMBOBOX -->
+        <Style x:Key="RoundedComboBox" TargetType="ComboBox">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinHeight" Value="30"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="6,2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Border x:Name="Border"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="12"
+                                    Padding="{TemplateBinding Padding}">
+                                <DockPanel>
+                                    <ContentPresenter HorizontalAlignment="Left"
+                                                      Margin="6,0,25,0"
+                                                      VerticalAlignment="Center" />
+                                    <ToggleButton DockPanel.Dock="Right"
+                                                  Focusable="False"
+                                                  IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                                                  ClickMode="Press"
+                                                  Background="Transparent"
+                                                  BorderThickness="0">
+                                        <Path Fill="Gray"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                    </ToggleButton>
+                                </DockPanel>
+                            </Border>
+                            <Popup IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   Placement="Bottom"
+                                   AllowsTransparency="True"
+                                   Focusable="False"
+                                   PopupAnimation="Slide">
+                                <Border Background="White"
+                                        BorderBrush="#4CAF50"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                    <ScrollViewer>
+                                        <ItemsPresenter />
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid>
         <!-- Фоновое изображение -->
         <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
 
+        <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Margin="10,35,0,0" Click="BackButton_Click" 
+                RenderTransformOrigin="0.5,0.558"/>
 
-        <Button Content="Back to Main Menu" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
+        <!-- Добавляем элементы для выбора языка -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="{DynamicResource Select Language}" 
+                       FontSize="24" Foreground="Green" 
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <ComboBox x:Name="LanguageComboBox"
+          Width="260"
+          Height="45"
+          FontSize="18"
+          Foreground="Black"
+          Style="{StaticResource RoundedComboBox}"
+          SelectionChanged="LanguageComboBox_SelectionChanged">
+                <ComboBoxItem Content="English" Tag="en"/>
+                <ComboBoxItem Content="Polski" Tag="pl"/>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </UserControl>

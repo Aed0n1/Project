@@ -30,3 +30,5 @@ C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\QRScannerV
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\SettingsView.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Project.sourcelink.json
 C:\Users\alexn\Desktop\Project\Project\bin\Debug\net8.0-windows\Project.dll.config
+C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Resources\StringResources.en.baml
+C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Resources\StringResources.pl.baml
