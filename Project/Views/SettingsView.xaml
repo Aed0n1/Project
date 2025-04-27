@@ -3,61 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Project.Views"
              Width="800" Height="950">
-    <UserControl.Resources>
 
-        <!-- СТИЛЬ ЗАКРУГЛЕННОГО COMBOBOX -->
-        <Style x:Key="RoundedComboBox" TargetType="ComboBox">
-            <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
-            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
-            <Setter Property="MinWidth" Value="120"/>
-            <Setter Property="MinHeight" Value="30"/>
-            <Setter Property="Background" Value="White"/>
+    <UserControl.Resources>
+        <!-- Стиль кнопки раскрытия с зелёной стрелочкой -->
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+            <Border Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Padding="10">
+                <Path x:Name="Arrow"
+                  Fill="#4CAF50"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Data="M 0 0 L 4 4 L 8 0 Z"/>
+            </Border>
+        </ControlTemplate>
+
+        <!-- Стиль для ComboBox с зелёной рамкой -->
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#2E7D32"/>
+            <!-- Здесь зелёная рамка -->
             <Setter Property="BorderBrush" Value="#4CAF50"/>
             <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Padding" Value="6,2"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="IsEditable" Value="True"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ComboBox">
                         <Grid>
-                            <Border x:Name="Border"
-                                    Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="12"
-                                    Padding="{TemplateBinding Padding}">
-                                <DockPanel>
-                                    <ContentPresenter HorizontalAlignment="Left"
-                                                      Margin="6,0,25,0"
-                                                      VerticalAlignment="Center" />
-                                    <ToggleButton DockPanel.Dock="Right"
-                                                  Focusable="False"
-                                                  IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
-                                                  ClickMode="Press"
-                                                  Background="Transparent"
-                                                  BorderThickness="0">
-                                        <Path Fill="Gray"
-                                              HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"
-                                              Data="M 0 0 L 4 4 L 8 0 Z"/>
-                                    </ToggleButton>
-                                </DockPanel>
-                            </Border>
-                            <Popup IsOpen="{TemplateBinding IsDropDownOpen}"
-                                   Placement="Bottom"
-                                   AllowsTransparency="True"
-                                   Focusable="False"
-                                   PopupAnimation="Slide">
-                                <Border Background="White"
-                                        BorderBrush="#4CAF50"
-                                        BorderThickness="1"
-                                        CornerRadius="6">
-                                    <ScrollViewer>
-                                        <ItemsPresenter />
-                                    </ScrollViewer>
-                                </Border>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Зелёная рамка вокруг ComboBox -->
+                            <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="12"
+                                Grid.ColumnSpan="2" />
+
+                            <!-- Текстовое поле -->
+                            <TextBox x:Name="PART_EditableTextBox"
+                                 Style="{x:Null}"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Foreground="{TemplateBinding Foreground}"
+                                 FontSize="{TemplateBinding FontSize}"
+                                 Margin="8,0,30,0"
+                                 IsReadOnly="True"
+                                 VerticalAlignment="Center"
+                                 Grid.Column="0"/>
+
+                            <!-- Стрелочка раскрытия -->
+                            <ToggleButton Grid.Column="1"
+                                      Template="{StaticResource ComboBoxToggleButton}"
+                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                      Focusable="False"
+                                      ClickMode="Press"
+                                      Width="30"
+                                      Height="30"
+                                      Margin="0,0,8,0"
+                                      Background="Transparent"/>
+
+                            <!-- Выпадающий список -->
+                            <Popup x:Name="PART_Popup"
+                               Placement="Bottom"
+                               IsOpen="{TemplateBinding IsDropDownOpen}"
+                               AllowsTransparency="True"
+                               Focusable="False"
+                               PopupAnimation="Fade">
+                                <Grid MaxHeight="200"
+                                  MinWidth="{TemplateBinding ActualWidth}"
+                                  Background="White"
+                                  SnapsToDevicePixels="True">
+                                    <Border Background="White" CornerRadius="6">
+                                        <ScrollViewer>
+                                            <StackPanel IsItemsHost="True"
+                                                    KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
                             </Popup>
                         </Grid>
                     </ControlTemplate>
@@ -65,31 +95,119 @@
             </Setter>
         </Style>
 
+        <!-- Ресурсы светлой и темной темы -->
+        <ResourceDictionary x:Key="LightTheme" 
+                            Source="pack://application:,,,/Resources/LightTheme.xaml" />
+
+        <ResourceDictionary x:Key="DarkTheme" 
+                            Source="pack://application:,,,/Resources/DarkTheme.xaml" />
     </UserControl.Resources>
-    <Grid>
+
+    <Grid Background="{DynamicResource AppBackgroundBrush}">
         <!-- Фоновое изображение -->
-        <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
 
         <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" 
                 HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Margin="10,35,0,0" Click="BackButton_Click" 
                 RenderTransformOrigin="0.5,0.558"/>
 
+        <TextBlock Text="{DynamicResource Select Theme}" 
+               FontSize="24" 
+               FontWeight="Bold"
+               Foreground="ForestGreen" 
+               HorizontalAlignment="Center"
+               Margin="0,412,0,-392"/>
+
+        <Button Content="{DynamicResource Switch Theme}"
+        Width="168" Height="49"
+        Click="SwitchTheme_Click"
+        FontSize="16"
+        BorderThickness="0"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Top"
+        Background="#804CAF50"
+        Foreground="White" Margin="0,475,0,0">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                    CornerRadius="20"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="15" ShadowDepth="3" Direction="320" Color="Black" Opacity="0.5"/>
+                        </Border.Effect>
+                        <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- Эффект при наведении -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Увеличение кнопки -->
+                                        <DoubleAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                    To="1.1" Duration="0:0:0.2"/>
+                                        <DoubleAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                    To="1.1" Duration="0:0:0.2"/>
+                                        <!-- Изменение цвета фона -->
+                                        <ColorAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="#B345A049" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- Возврат размера кнопки -->
+                                        <DoubleAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                    To="1.0" Duration="0:0:0.2"/>
+                                        <DoubleAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                    To="1.0" Duration="0:0:0.2"/>
+                                        <!-- Возврат цвета фона -->
+                                        <ColorAnimation 
+                                    Storyboard.TargetName="border"
+                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                    To="#804CAF50" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
         <!-- Добавляем элементы для выбора языка -->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0" Orientation="Vertical">
+
             <TextBlock Text="{DynamicResource Select Language}" 
-                       FontSize="24" Foreground="Green" 
-                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+               FontSize="24" 
+               FontWeight="Bold"
+               Foreground="ForestGreen" 
+               HorizontalAlignment="Center"
+               Margin="0,0,0,20"/>
+
             <ComboBox x:Name="LanguageComboBox"
-          Width="260"
-          Height="45"
-          FontSize="18"
-          Foreground="Black"
-          Style="{StaticResource RoundedComboBox}"
-          SelectionChanged="LanguageComboBox_SelectionChanged">
+              Width="260"
+              SelectionChanged="LanguageComboBox_SelectionChanged">
                 <ComboBoxItem Content="English" Tag="en"/>
                 <ComboBoxItem Content="Polski" Tag="pl"/>
             </ComboBox>
+
         </StackPanel>
+
     </Grid>
 </UserControl>

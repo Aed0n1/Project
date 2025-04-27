@@ -60,5 +60,35 @@ namespace Project.Views
 
             Application.Current.Resources.MergedDictionaries.Add(dict);
         }
+
+
+        private bool isDarkTheme = false;
+
+        private void SwitchTheme_Click(object sender, RoutedEventArgs e)
+        {
+            string themePath = isDarkTheme ?
+                "Resources/LightTheme.xaml" :
+                "Resources/DarkTheme.xaml";
+
+            var newTheme = new ResourceDictionary
+            {
+                Source = new Uri(themePath, UriKind.Relative)
+            };
+
+            // Убираем старую тему
+            var existingTheme = Application.Current.Resources.MergedDictionaries
+                .FirstOrDefault(d => d.Source != null &&
+                    (d.Source.OriginalString.Contains("LightTheme.xaml") || d.Source.OriginalString.Contains("DarkTheme.xaml")));
+
+            if (existingTheme != null)
+            {
+                Application.Current.Resources.MergedDictionaries.Remove(existingTheme);
+            }
+
+            // Подключаем новую тему
+            Application.Current.Resources.MergedDictionaries.Add(newTheme);
+
+            isDarkTheme = !isDarkTheme;
+        }
     }
 }

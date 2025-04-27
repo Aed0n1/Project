@@ -16,6 +16,7 @@
     <sys:String x:Key="KKal">KKal</sys:String>
     <sys:String x:Key="QR-Code">Kod QR</sys:String>
     <sys:String x:Key="Settings">Ustawienia</sys:String>
-
+    <sys:String x:Key="Switch Theme">Zmień motyw</sys:String>
+    <sys:String x:Key="Select Theme">Wybierz motyw</sys:String>
 
 </ResourceDictionary>

@@ -3,10 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Project.Views"
         Title="Shopping List App" Height="950" Width="800">
-    <Grid>
-
-            <!-- Фоновое изображение -->
-            <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
+    <Grid Background="{DynamicResource AppBackgroundBrush}">
 
             <!-- Круглый логотип без белого фона -->
             <Ellipse Width="270" Height="270" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,650">

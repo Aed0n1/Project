@@ -102,10 +102,9 @@
 
 
 
-    <Grid>
+    <Grid Background="{DynamicResource AppBackgroundBrush}">
 
-        <!-- Фоновое изображение -->
-        <Image Source="pack://application:,,,/Images/background.JPG" Stretch="Fill"/>
+
 
         <!-- Круглый логотип без белого фона -->
         <Ellipse Width="270" Height="270" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="580,-40,0,650">
