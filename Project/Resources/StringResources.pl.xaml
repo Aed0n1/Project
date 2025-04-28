@@ -18,5 +18,10 @@
     <sys:String x:Key="Settings">Ustawienia</sys:String>
     <sys:String x:Key="Switch Theme">Zmień motyw</sys:String>
     <sys:String x:Key="Select Theme">Wybierz motyw</sys:String>
-
+    <sys:String x:Key="Type a name of a product">Wpisz nazwę produktu</sys:String>
+    <sys:String x:Key="Enter product barcode">Wpisz kod kreskowy produktu</sys:String>
+    <sys:String x:Key="Enter product preotein">Wprowadź białko produktu (100g)</sys:String>
+    <sys:String x:Key="Enter product fats">Wprowadź tłuszcze produktu (100g)</sys:String>
+    <sys:String x:Key="Enter product carbohydrates">Wprowadź węglowodany produktu (100g)</sys:String>
+    <sys:String x:Key="Enter product calories">Wprowadź kalorie produktu (100g)</sys:String>
 </ResourceDictionary>

@@ -22,6 +22,13 @@ namespace Project.Views
             InitializeComponent();
         }
 
+        public void AddList_Click(object sender, RoutedEventArgs e)
+        {
+            // При нажатии на кнопку "To Add a List" показываем AddListView
+           
+            ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
+        }
+
         public void BackButton_Click(object sender, RoutedEventArgs e)
         {
             // Переключаемся на MainWindow

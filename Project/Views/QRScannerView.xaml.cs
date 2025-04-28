@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Project.Views
 {
@@ -32,10 +21,19 @@ namespace Project.Views
         }
         private void ProductNumberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            // Разрешаем только цифры
-            Regex regex = new Regex("[^0-9]+");
+            // Разрешаем только цифры, точку и запятую
+            Regex regex = new Regex("[^0-9,]+");
             e.Handled = regex.IsMatch(e.Text);
         }
+
+        private void ProductTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // Разрешаем только латинские буквы
+            Regex regex = new Regex("[^a-zA-Z]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+
         // Показываем Popup при наведении мышки на TextBox
         private void ProductNumberTextBox_MouseEnter(object sender, MouseEventArgs e)
         {

@@ -17,8 +17,8 @@
 
 
         <!-- Кнопки для переключения контента -->
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Vertical">
-            <Button Content="{DynamicResource Add new list}" Style="{StaticResource RoundedButton}"/>
+        <StackPanel x:Name="ButtonPanel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Vertical">
+            <Button Content="{DynamicResource Add new list}" Style="{StaticResource RoundedButton}" Click="AddList_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -17,4 +17,10 @@
     <sys:String x:Key="Settings">Settings</sys:String>
     <sys:String x:Key="Switch Theme">Switch Theme</sys:String>
     <sys:String x:Key="Select Theme">Select Theme</sys:String>
+    <sys:String x:Key="Type a name of a product">Type a name of a product</sys:String>
+    <sys:String x:Key="Enter product barcode">Enter product barcode</sys:String>
+    <sys:String x:Key="Enter product preotein">Enter product preotein (100g)</sys:String>
+    <sys:String x:Key="Enter product fats">Enter product fats (100g)</sys:String>
+    <sys:String x:Key="Enter product carbohydrates">Enter product carbohydrates (100g)</sys:String>
+    <sys:String x:Key="Enter product calories">Enter product calories (100g)</sys:String>
 </ResourceDictionary>

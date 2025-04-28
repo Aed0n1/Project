@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\alexn\Desktop\Project\Project\App.xaml
-10-12812864
+12-1452604202
 
-8-2038020286
+10-474489975
 198-344842731
-MainWindow.xaml;Resources\DarkTheme.xaml;Resources\LightTheme.xaml;Resources\StringResources.en.xaml;Resources\StringResources.pl.xaml;Styles\ButtonStyles.xaml;Views\AddListView.xaml;Views\KKalView.xaml;Views\QRScannerView.xaml;Views\SettingsView.xaml;
+MainWindow.xaml;Resources\DarkTheme.xaml;Resources\LightTheme.xaml;Resources\StringResources.en.xaml;Resources\StringResources.pl.xaml;Styles\ButtonStyles.xaml;Views\AddListView.xaml;Views\CreateList.xaml;Views\KKalView.xaml;Views\QRScannerView.xaml;Views\SettingsOfList.xaml;Views\SettingsView.xaml;
 
 False
 
