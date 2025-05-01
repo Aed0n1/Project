@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="BackToMainMenu">Back To Main Menu</sys:String>
+    <sys:String x:Key="BackToMainMenu">Back</sys:String>
     <sys:String x:Key="Add new list">Add new list</sys:String>
     <sys:String x:Key="On this page you can find energy values of products">On this page you can find energy values of products</sys:String>
     <sys:String x:Key="Proteins (per 100g):">Proteins (per 100g):</sys:String>
@@ -23,4 +23,9 @@
     <sys:String x:Key="Enter product fats">Enter product fats (100g)</sys:String>
     <sys:String x:Key="Enter product carbohydrates">Enter product carbohydrates (100g)</sys:String>
     <sys:String x:Key="Enter product calories">Enter product calories (100g)</sys:String>
+    <sys:String x:Key="Please fill in the information below">Please fill in the information below</sys:String>
+    <sys:String x:Key="List title">List title</sys:String>
+    <sys:String x:Key="List description">List description</sys:String>
+    <sys:String x:Key="Save">Save</sys:String>
+    
 </ResourceDictionary>

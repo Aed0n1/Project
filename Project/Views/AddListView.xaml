@@ -13,7 +13,7 @@
             </Ellipse.Fill>
         </Ellipse>
 
-        <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558"/>
+        <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558" Width="200"/>
 
 
         <!-- Кнопки для переключения контента -->

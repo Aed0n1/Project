@@ -24,4 +24,8 @@
     <sys:String x:Key="Enter product fats">Wprowadź tłuszcze produktu (100g)</sys:String>
     <sys:String x:Key="Enter product carbohydrates">Wprowadź węglowodany produktu (100g)</sys:String>
     <sys:String x:Key="Enter product calories">Wprowadź kalorie produktu (100g)</sys:String>
+    <sys:String x:Key="Please fill in the information below">Proszę uzupełnić poniższe informacje</sys:String>
+    <sys:String x:Key="List title">Nazwa listy</sys:String>
+    <sys:String x:Key="List description">Opis listy</sys:String>
+    <sys:String x:Key="Save">Zapisz</sys:String>
 </ResourceDictionary>

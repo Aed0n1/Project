@@ -24,8 +24,9 @@ namespace Project.Views
 
         public void AddList_Click(object sender, RoutedEventArgs e)
         {
-            // При нажатии на кнопку "To Add a List" показываем AddListView
-           
+            // При нажатии на кнопку "To Add a List" показываем CreateListView
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.MainContent.Content = new CreateListView();
             ButtonPanel.Visibility = Visibility.Collapsed; // Скрыть кнопки
         }
 

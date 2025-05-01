@@ -8,8 +8,6 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
-            // Устанавливаем начальное содержимое
-            //MainContent.Content = new MainWindow();
         }
 
         public void AddListButton_Click(object sender, RoutedEventArgs e)
@@ -46,6 +44,11 @@ namespace Project
             // Возвращаем кнопки обратно
             ButtonPanel.Visibility = Visibility.Visible;
             MainContent.Content = null;
+        }
+        public void ShowAddListView()
+        {
+            MainContent.Content = new AddListView();
+            ButtonPanel.Visibility = Visibility.Collapsed;
         }
     }
 }

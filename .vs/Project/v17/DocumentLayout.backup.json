@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\alexn\\Desktop\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\createlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\createlist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\createlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\createlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\settingsoflist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\settingsoflist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\kkalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\kkalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\settingsoflist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\settingsoflist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\resources\\stringresources.en.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\resources\\stringresources.en.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\createlist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\createlist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\addlistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\addlistview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\resources\\stringresources.pl.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\resources\\stringresources.pl.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\views\\addlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\views\\addlistview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|solutionrelative:project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BA7E66-EE86-4AC5-B869-A6807591EC13}|Project\\Project.csproj|c:\\users\\alexn\\desktop\\project\\project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 244,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\App.xaml",
               "RelativeDocumentMoniker": "Project\\App.xaml",
@@ -63,103 +55,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SettingsOfList.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsOfList.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\Views\\SettingsOfList.xaml.cs",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsOfList.xaml.cs",
-              "RelativeToolTip": "Project\\Views\\SettingsOfList.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T23:24:42.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SettingsOfList.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsOfList.xaml",
-              "RelativeDocumentMoniker": "Project\\Views\\SettingsOfList.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\SettingsOfList.xaml",
-              "RelativeToolTip": "Project\\Views\\SettingsOfList.xaml",
+              "Title": "StringResources.en.xaml",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Resources\\StringResources.en.xaml",
+              "RelativeDocumentMoniker": "Project\\Resources\\StringResources.en.xaml",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Resources\\StringResources.en.xaml",
+              "RelativeToolTip": "Project\\Resources\\StringResources.en.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T23:21:50.828Z",
+              "WhenOpened": "2025-04-30T20:51:11.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "StringResources.pl.xaml",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Resources\\StringResources.pl.xaml",
+              "RelativeDocumentMoniker": "Project\\Resources\\StringResources.pl.xaml",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Resources\\StringResources.pl.xaml",
+              "RelativeToolTip": "Project\\Resources\\StringResources.pl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-30T20:46:16.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KKalView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml",
+              "RelativeDocumentMoniker": "Project\\Views\\KKalView.xaml",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\KKalView.xaml",
+              "RelativeToolTip": "Project\\Views\\KKalView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-30T19:56:58.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateListView.xaml",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateListView.xaml",
+              "RelativeDocumentMoniker": "Project\\Views\\CreateListView.xaml",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateListView.xaml",
+              "RelativeToolTip": "Project\\Views\\CreateListView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-30T20:00:15.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Project\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Project\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T15:30:02.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AddListView.xaml",
               "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml",
               "RelativeDocumentMoniker": "Project\\Views\\AddListView.xaml",
               "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml",
               "RelativeToolTip": "Project\\Views\\AddListView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T23:04:19.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddListView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\Views\\AddListView.xaml.cs",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\AddListView.xaml.cs",
-              "RelativeToolTip": "Project\\Views\\AddListView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T23:14:59.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Project\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml",
-              "RelativeToolTip": "Project\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T23:06:00.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Project\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T23:03:10.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateList.xaml",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateList.xaml",
-              "RelativeDocumentMoniker": "Project\\Views\\CreateList.xaml",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateList.xaml*",
-              "RelativeToolTip": "Project\\Views\\CreateList.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T23:13:05.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateList.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateList.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\Views\\CreateList.xaml.cs",
-              "ToolTip": "C:\\Users\\alexn\\Desktop\\Project\\Project\\Views\\CreateList.xaml.cs",
-              "RelativeToolTip": "Project\\Views\\CreateList.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T23:26:51.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T15:50:56.231Z"
             }
           ]
         }
