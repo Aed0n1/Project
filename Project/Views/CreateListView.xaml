@@ -81,7 +81,8 @@
                 Style="{StaticResource RoundedButton}" 
                 Width="200"
                 Height="60"
-                FontSize="18"/>
+                FontSize="18"
+                Click="SaveButton_Click"/>
 
         </StackPanel>
         <!-- Кнопка "Назад" -->
