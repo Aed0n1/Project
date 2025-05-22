@@ -1,38 +1,114 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using Project.Models;
 
 namespace Project.Views
 {
     public partial class QRScannerView : UserControl
     {
+        private readonly ProductDatabase _productDatabase;
+
         public QRScannerView()
         {
             InitializeComponent();
+            _productDatabase = new ProductDatabase();
         }
 
-        public void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // Переключаемся на MainWindow
-            var mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainWindow.BackToMainWindow();
-        }
-        private void ProductNumberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            // Разрешаем только цифры, точку и запятую
-            Regex regex = new Regex("[^0-9,]+");
-            e.Handled = regex.IsMatch(e.Text);
+            // Логика возврата на предыдущий экран
+            if (Application.Current.MainWindow is MainWindow mainWindow)
+            {
+                mainWindow.BackToMainWindow();
+            }
         }
 
         private void ProductTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            // Разрешаем только латинские буквы
-            Regex regex = new Regex("[^a-zA-Z]+");
-            e.Handled = regex.IsMatch(e.Text);
+            // Разрешаем только буквы и цифры
+            foreach (char c in e.Text)
+            {
+                if (!char.IsLetterOrDigit(c) && c != ' ')
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
         }
 
+        private void ProductNumberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // Разрешаем только цифры
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+        }
+
+        private async void AddProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Проверяем, что все поля заполнены
+                if (string.IsNullOrWhiteSpace(ProductNameTextBox.Text) ||
+                    ProductTypeComboBox.SelectedItem == null ||
+                    string.IsNullOrWhiteSpace(ProductNumberTextBox.Text) ||
+                    string.IsNullOrWhiteSpace(ProductProteinTextBox.Text) ||
+                    string.IsNullOrWhiteSpace(ProductFatsTextBox.Text) ||
+                    string.IsNullOrWhiteSpace(ProductCarbohydratesTextBox.Text) ||
+                    string.IsNullOrWhiteSpace(ProductCaloriesTextBox.Text))
+                {
+                    MessageBox.Show("Please fill in all fields", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                // Получаем значения из полей
+                string name = ProductNameTextBox.Text;
+                string type = ((ComboBoxItem)ProductTypeComboBox.SelectedItem).Content.ToString() ?? string.Empty;
+                string barcode = ProductNumberTextBox.Text;
+
+                // Парсим числовые значения
+                if (!double.TryParse(ProductProteinTextBox.Text, out double protein) ||
+                    !double.TryParse(ProductFatsTextBox.Text, out double fats) ||
+                    !double.TryParse(ProductCarbohydratesTextBox.Text, out double carbohydrates) ||
+                    !double.TryParse(ProductCaloriesTextBox.Text, out double calories))
+                {
+                    MessageBox.Show("Please enter valid numbers for nutritional values", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                // Добавляем продукт в базу данных
+                await _productDatabase.AddProduct(name, type, barcode, protein, fats, carbohydrates, calories);
+
+                // Очищаем поля после успешного добавления
+                ClearFields();
+
+                MessageBox.Show("Product added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding product: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ClearFields()
+        {
+            ProductNameTextBox.Clear();
+            ProductTypeComboBox.SelectedIndex = -1;
+            ProductNumberTextBox.Clear();
+            ProductProteinTextBox.Clear();
+            ProductFatsTextBox.Clear();
+            ProductCarbohydratesTextBox.Clear();
+            ProductCaloriesTextBox.Clear();
+        }
 
         // Показываем Popup при наведении мышки на TextBox
         private void ProductNumberTextBox_MouseEnter(object sender, MouseEventArgs e)
@@ -60,7 +136,5 @@ namespace Project.Views
             var popupContent = (UIElement)popup.Child;
             return popupContent.IsMouseOver || popup.IsMouseOver;
         }
-
-
     }
 }

@@ -118,7 +118,7 @@
            Foreground="#006400"
            TextAlignment="Center"
            HorizontalAlignment="Center"
-           Margin="0,235,0,639"
+           Margin="0,198,0,676"
            Background="Transparent"
            TextWrapping="Wrap" Width="424">
             <TextBlock.Effect>
@@ -136,7 +136,6 @@
           IsEditable="True"
           IsTextSearchEnabled="True"
           StaysOpenOnEdit="True"
-          SelectionChanged="ProductComboBox_SelectionChanged"
           DisplayMemberPath="Name"
           Margin="0,0,0,15"
           Height="40"
@@ -150,6 +149,16 @@
                     <DropShadowEffect BlurRadius="5" ShadowDepth="2" Opacity="0.2"/>
                 </ComboBox.Effect>
             </ComboBox>
+            
+            <TextBlock Text="{DynamicResource Type}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
+            <TextBox Name="TypeBox" IsReadOnly="True" Margin="0,0,0,10"
+             FontSize="14" Padding="8"
+             Background="White" Foreground="Black"
+             BorderBrush="#4CAF50" BorderThickness="2">
+                <TextBox.Effect>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="1" Opacity="0.1"/>
+                </TextBox.Effect>
+            </TextBox>
 
             <TextBlock Text="{DynamicResource Proteins (per 100g):}" FontWeight="SemiBold" Foreground="#2E7D32" Margin="0,0,0,3"/>
             <TextBox Name="ProteinsBox" IsReadOnly="True" Margin="0,0,0,10"

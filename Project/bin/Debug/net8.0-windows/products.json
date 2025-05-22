@@ -1,0 +1,11 @@
+[
+  {
+    "Barcode": "8001234567890",
+    "Name": "Parmesan",
+    "Type": "Dairy",
+    "Protein": 23,
+    "Fats": 28,
+    "Carbohydrates": 0.5,
+    "Calories": 356
+  }
+]

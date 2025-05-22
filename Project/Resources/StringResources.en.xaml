@@ -5,6 +5,7 @@
     <sys:String x:Key="BackToMainMenu">Back</sys:String>
     <sys:String x:Key="Add new list">Add new list</sys:String>
     <sys:String x:Key="On this page you can find energy values of products">On this page you can find energy values of products</sys:String>
+    <sys:String x:Key="Type">Type</sys:String>
     <sys:String x:Key="Proteins (per 100g):">Proteins (per 100g):</sys:String>
     <sys:String x:Key="Fats (per 100g):">Fats (per 100g):</sys:String>
     <sys:String x:Key="Carbohydrates (per 100g):">Carbohydrates (per 100g):</sys:String>
@@ -18,6 +19,7 @@
     <sys:String x:Key="Switch Theme">Switch Theme</sys:String>
     <sys:String x:Key="Select Theme">Select Theme</sys:String>
     <sys:String x:Key="Type a name of a product">Type a name of a product</sys:String>
+    <sys:String x:Key="Choose a type of a product">Choose a type of a product</sys:String>
     <sys:String x:Key="Enter product barcode">Enter product barcode</sys:String>
     <sys:String x:Key="Enter product preotein">Enter product preotein (100g)</sys:String>
     <sys:String x:Key="Enter product fats">Enter product fats (100g)</sys:String>

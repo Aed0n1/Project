@@ -21,7 +21,7 @@
 
         <!-- Содержимое окна -->
 
-        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Height="600" Margin="0,165,0,0" HorizontalAlignment="Center" Width="480">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Height="730" Margin="0,165,0,0" HorizontalAlignment="Center" Width="480">
 
             <TextBlock Text="{DynamicResource Type a name of a product }" 
                FontSize="24" 
@@ -65,6 +65,143 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
+
+            <!-- Type of a product-->
+
+            <TextBlock Text="{DynamicResource Choose a type of a product }" 
+             FontSize="24" 
+             FontWeight="Bold"
+             Foreground="ForestGreen" 
+             HorizontalAlignment="Center"
+             Margin="0,0,0,20"/>
+
+            <ComboBox Name="ProductTypeComboBox"
+                      Width="250"
+                      Height="45"
+                      FontSize="16"
+                      Margin="0,0,0,15"
+                      HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center"
+                      IsEditable="True"
+                      Background="White"
+                      Foreground="#2E7D32"
+                      BorderBrush="#4CAF50"
+                      BorderThickness="2">
+                <ComboBox.Resources>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Padding" Value="10"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ComboBoxItem">
+                                    <Border Background="{TemplateBinding Background}"
+                                            Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#E8F5E9"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#C8E6C9"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ComboBox.Resources>
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content}" 
+                                 FontSize="16" 
+                                 Foreground="#2E7D32"
+                                 Padding="10,5"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+                <ComboBox.Template>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="12"
+                                    Grid.ColumnSpan="2" />
+
+                            <TextBox x:Name="PART_EditableTextBox"
+                                     Style="{x:Null}"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Foreground="{TemplateBinding Foreground}"
+                                     FontSize="{TemplateBinding FontSize}"
+                                     Margin="15,0,30,0"
+                                     IsReadOnly="True"
+                                     VerticalAlignment="Center"
+                                     Grid.Column="0"/>
+
+                            <ToggleButton Grid.Column="1"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                          Focusable="False"
+                                          ClickMode="Press"
+                                          Width="30"
+                                          Height="30"
+                                          Margin="0,0,8,0"
+                                          Background="Transparent">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border Background="Transparent"
+                                                BorderBrush="Transparent"
+                                                BorderThickness="0"
+                                                Padding="10">
+                                            <Path x:Name="Arrow"
+                                                  Fill="#4CAF50"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"
+                                                  Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+
+                            <Popup x:Name="PART_Popup"
+                                   Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True"
+                                   Focusable="False"
+                                   PopupAnimation="Fade">
+                                <Grid MaxHeight="200"
+                                      MinWidth="{TemplateBinding ActualWidth}"
+                                      Background="White"
+                                      SnapsToDevicePixels="True">
+                                    <Border Background="White" 
+                                            CornerRadius="6"
+                                            BorderBrush="#4CAF50"
+                                            BorderThickness="1">
+                                        <ScrollViewer>
+                                            <StackPanel IsItemsHost="True"
+                                                      KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </ComboBox.Template>
+                <ComboBoxItem Content="🍎 Vegetables and Fruits"/>
+                <ComboBoxItem Content="🍞 Grains and Flour Products"/>
+                <ComboBoxItem Content="🍗 Protein Products"/>
+                <ComboBoxItem Content="🥛 Dairy Products"/>
+                <ComboBoxItem Content="🍭 Sweets and Desserts"/>
+                <ComboBoxItem Content="🧂 Fats and Oils"/>
+                <ComboBoxItem Content="🥫 Semi-finished and Ready Products"/>
+                <ComboBoxItem Content="🥤 Beverages"/>
+                <ComboBoxItem Content="🧪 Spices and Additives"/>
+            </ComboBox>
 
             <!-- Barcode of a product-->
 
@@ -253,7 +390,11 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <Button Content="{DynamicResource Add a product}" Style="{StaticResource RoundedButton}" Height="60" Width="250"/>
+            <Button Content="{DynamicResource Add a product}" 
+                    Style="{StaticResource RoundedButton}" 
+                    Height="60" 
+                    Width="250"
+                    Click="AddProductButton_Click"/>
 
         </StackPanel>
 

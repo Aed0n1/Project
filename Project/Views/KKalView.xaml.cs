@@ -12,40 +12,51 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.Models;
 
 namespace Project.Views
 {
     public partial class KKalView : UserControl
     {
-        private List<Product> products;
+        private ProductDatabase productDatabase;
+        private List<Models.Product> products;
 
         public KKalView()
         {
             InitializeComponent();
+            productDatabase = new ProductDatabase();
             LoadProducts();
-            ProductComboBox.ItemsSource = products;
+            if (ProductComboBox != null)
+            {
+                ProductComboBox.SelectionChanged += ProductComboBox_SelectionChanged;
+            }
         }
 
         private void LoadProducts()
         {
-            products = new List<Product>
+            try
             {
-                new Product { Name = "Яблоко", Proteins = 0.4, Fats = 0.4, Carbs = 9.8, Calories = 47 },
-                new Product { Name = "Куриная грудка", Proteins = 23.0, Fats = 1.9, Carbs = 0.0, Calories = 113 },
-                new Product { Name = "Молоко", Proteins = 3.3, Fats = 3.6, Carbs = 4.8, Calories = 64 },
-                new Product { Name = "Огурец", Proteins = 0.8, Fats = 0.1, Carbs = 2.5, Calories = 15 },
-                new Product { Name = "Рис варёный", Proteins = 2.2, Fats = 0.5, Carbs = 24.9, Calories = 116 }
-            };
+                products = productDatabase.GetAllProducts();
+                if (ProductComboBox != null)
+                {
+                    ProductComboBox.ItemsSource = products;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке продуктов: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void ProductComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ProductComboBox.SelectedItem is Product selectedProduct)
+            if (ProductComboBox?.SelectedItem is Models.Product selectedProduct)
             {
-                ProteinsBox.Text = selectedProduct.Proteins.ToString("0.0");
-                FatsBox.Text = selectedProduct.Fats.ToString("0.0");
-                CarbsBox.Text = selectedProduct.Carbs.ToString("0.0");
-                CaloriesBox.Text = selectedProduct.Calories.ToString("0");
+                if (TypeBox != null) TypeBox.Text = selectedProduct.Type;
+                if (ProteinsBox != null) ProteinsBox.Text = selectedProduct.Protein.ToString("F1");
+                if (FatsBox != null) FatsBox.Text = selectedProduct.Fats.ToString("F1");
+                if (CarbsBox != null) CarbsBox.Text = selectedProduct.Carbohydrates.ToString("F1");
+                if (CaloriesBox != null) CaloriesBox.Text = selectedProduct.Calories.ToString("F1");
             }
         }
 
@@ -60,7 +71,9 @@ namespace Project.Views
 
     public class Product
     {
+        public string Barcode { get; set; }
         public string Name { get; set; }
+        public string Type { get; set; }
         public double Proteins { get; set; }
         public double Fats { get; set; }
         public double Carbs { get; set; }

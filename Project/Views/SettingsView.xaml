@@ -95,12 +95,7 @@
             </Setter>
         </Style>
 
-        <!-- Ресурсы светлой и темной темы -->
-        <ResourceDictionary x:Key="LightTheme" 
-                            Source="pack://application:,,,/Resources/LightTheme.xaml" />
 
-        <ResourceDictionary x:Key="DarkTheme" 
-                            Source="pack://application:,,,/Resources/DarkTheme.xaml" />
     </UserControl.Resources>
 
     <Grid Background="{DynamicResource AppBackgroundBrush}">

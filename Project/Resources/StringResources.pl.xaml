@@ -6,6 +6,7 @@
     <sys:String x:Key="BackToMainMenu">Powrót</sys:String>
     <sys:String x:Key="Add new list">Dodaj nową listę</sys:String>
     <sys:String x:Key="On this page you can find energy values of products">Na tej stronie znajdziesz wartości energetyczne produktów</sys:String>
+    <sys:String x:Key="Type">Typ</sys:String>
     <sys:String x:Key="Proteins (per 100g):">Białka (na 100g):</sys:String>
     <sys:String x:Key="Fats (per 100g):">Tłuszcze (na 100g):</sys:String>
     <sys:String x:Key="Carbohydrates (per 100g):">Węglowodany (na 100g):</sys:String>
@@ -19,6 +20,7 @@
     <sys:String x:Key="Switch Theme">Zmień motyw</sys:String>
     <sys:String x:Key="Select Theme">Wybierz motyw</sys:String>
     <sys:String x:Key="Type a name of a product">Wpisz nazwę produktu</sys:String>
+    <sys:String x:Key="Choose a type of a product">Wybierz typ produktu</sys:String>
     <sys:String x:Key="Enter product barcode">Wpisz kod kreskowy produktu</sys:String>
     <sys:String x:Key="Enter product preotein">Wprowadź białko produktu (100g)</sys:String>
     <sys:String x:Key="Enter product fats">Wprowadź tłuszcze produktu (100g)</sys:String>
