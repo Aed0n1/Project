@@ -28,6 +28,7 @@ namespace Project.Views
 
             if (string.IsNullOrWhiteSpace(title))
             {
+                MessageBox.Show("Please enter a list name", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -39,15 +40,19 @@ namespace Project.Views
                 ListNameTextBox.Clear();
                 ListDescriptionTextBox.Clear();
                 
-                // Возвращаемся на предыдущий экран
+                // Возвращаемся на предыдущий экран и обновляем список
                 var mainWindow = (MainWindow)Application.Current.MainWindow;
                 mainWindow.ShowAddListView();
+                
+                // Обновляем список в AddListView
+                if (mainWindow.MainContent.Content is AddListView addListView)
+                {
+                    addListView.RefreshList();
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                // В случае ошибки просто возвращаемся на предыдущий экран
-                var mainWindow = (MainWindow)Application.Current.MainWindow;
-                mainWindow.ShowAddListView();
+                MessageBox.Show($"Error saving list: {ex.Message}", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

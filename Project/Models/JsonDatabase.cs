@@ -20,74 +20,93 @@ namespace Project.Models
 
         public JsonDatabase(string filePath = "lists.json")
         {
-            _filePath = filePath;
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            _filePath = Path.Combine(baseDirectory, filePath);
             _items = new List<ListItem>();
             LoadData();
         }
 
         private void LoadData()
         {
-            if (File.Exists(_filePath))
+            try
             {
-                string json = File.ReadAllText(_filePath);
-                if (string.IsNullOrWhiteSpace(json))
+                if (File.Exists(_filePath))
                 {
-                    _items = new List<ListItem>();
-                    return;
-                }
+                    string json = File.ReadAllText(_filePath);
+                    if (string.IsNullOrWhiteSpace(json))
+                    {
+                        _items = new List<ListItem>();
+                        return;
+                    }
 
-                try
-                {
-                    _items = JsonSerializer.Deserialize<List<ListItem>>(json) ?? new List<ListItem>();
+                    try
+                    {
+                        _items = JsonSerializer.Deserialize<List<ListItem>>(json) ?? new List<ListItem>();
+                    }
+                    catch (JsonException)
+                    {
+                       
+                        _items = new List<ListItem>();
+                        SaveData().Wait();
+                    }
                 }
-                catch (JsonException)
+                else
                 {
-                    // Если файл содержит некорректный JSON, создаем новый пустой список
                     _items = new List<ListItem>();
-                    // Перезаписываем файл с корректным JSON
                     SaveData().Wait();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                _items = new List<ListItem>();
-                // Создаем файл с пустым массивом
-                SaveData().Wait();
+                throw new Exception($"Error loading data: {ex.Message}", ex);
             }
         }
 
         private async Task SaveData()
         {
-            string json = JsonSerializer.Serialize(_items, new JsonSerializerOptions { WriteIndented = true });
-            await File.WriteAllTextAsync(_filePath, json);
+            try
+            {
+                string json = JsonSerializer.Serialize(_items, new JsonSerializerOptions { WriteIndented = true });
+                await File.WriteAllTextAsync(_filePath, json);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error saving data: {ex.Message}", ex);
+            }
         }
 
         public async Task<ListItem> AddItem(string title, string description)
         {
-            // Генерируем новый id как двузначное число
-            int maxId = 0;
-            if (_items.Count > 0)
+            try
             {
-                foreach (var currentItem in _items)
+                int maxId = 0;
+                if (_items.Count > 0)
                 {
-                    if (int.TryParse(currentItem.Id, out int idNum))
+                    foreach (var currentItem in _items)
                     {
-                        if (idNum > maxId) maxId = idNum;
+                        if (int.TryParse(currentItem.Id, out int idNum))
+                        {
+                            if (idNum > maxId) maxId = idNum;
+                        }
                     }
                 }
+                string newId = (maxId + 1).ToString("D2");
+
+                var item = new ListItem
+                {
+                    Id = newId,
+                    Title = title,
+                    Description = description
+                };
+
+                _items.Add(item);
+                await SaveData();
+                return item;
             }
-            string newId = (maxId + 1).ToString("D2");
-
-            var item = new ListItem
+            catch (Exception ex)
             {
-                Id = newId,
-                Title = title,
-                Description = description
-            };
-
-            _items.Add(item);
-            await SaveData();
-            return item;
+                throw new Exception($"Error adding element: {ex.Message}", ex);
+            }
         }
 
         public List<ListItem> GetAllItems()
@@ -97,27 +116,53 @@ namespace Project.Models
 
         public async Task<bool> DeleteItem(string id)
         {
-            var item = _items.Find(x => x.Id == id);
-            if (item != null)
+            try
             {
-                _items.Remove(item);
-                await SaveData();
-                return true;
+                var item = _items.Find(x => x.Id == id);
+                if (item != null)
+                {
+                    _items.Remove(item);
+                    await SaveData();
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                throw new Exception($"Error deleting item: {ex.Message}", ex);
+            }
         }
 
         public async Task<bool> UpdateItem(string id, string title, string description)
         {
-            var item = _items.Find(x => x.Id == id);
-            if (item != null)
+            try
             {
-                item.Title = title;
-                item.Description = description;
-                await SaveData();
-                return true;
+                var item = _items.Find(x => x.Id == id);
+                if (item != null)
+                {
+                    item.Title = title;
+                    item.Description = description;
+                    await SaveData();
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                throw new Exception($"Error updating item: {ex.Message}", ex);
+            }
+        }
+
+        public ListItem GetItem(string id)
+        {
+            try
+            {
+                return _items.Find(x => x.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error getting item: {ex.Message}", ex);
+            }
         }
     }
 } 

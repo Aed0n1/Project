@@ -7,10 +7,44 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/ButtonStyles.xaml"  />
+                <ResourceDictionary Source="Styles/TextBoxStyles.xaml" />
                 <ResourceDictionary Source="Resources/StringResources.en.xaml" />
                 <ResourceDictionary Source="Resources/StringResources.pl.xaml" />
                 <ResourceDictionary Source="Resources/LightTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Стиль для TextBox -->
+            <Style x:Key="RoundedTextBox" TargetType="TextBox">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="10">
+                                <Grid>
+                                    <TextBlock Text="{TemplateBinding Tag}"
+                                             Foreground="Gray"
+                                             Margin="5,0,0,0"
+                                             VerticalAlignment="Center"
+                                             Visibility="{Binding Text.IsEmpty, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <ScrollViewer x:Name="PART_ContentHost" 
+                                                Margin="5,0,0,0"
+                                                VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Height" Value="40"/>
+            </Style>
+            
+            <!-- Конвертер для видимости -->
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

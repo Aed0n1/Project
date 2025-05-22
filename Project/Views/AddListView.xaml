@@ -15,11 +15,66 @@
 
         <Button Content="{DynamicResource BackToMainMenu}" Style="{StaticResource RoundedButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,35,0,0" Click="BackButton_Click" RenderTransformOrigin="0.5,0.558" Width="200"/>
 
+        <!-- Список элементов -->
+        <ListBox x:Name="ItemsListBox" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Top" 
+                 Margin="0,180,0,0" 
+                 Width="580" 
+                 Height="400"
+                 Background="Transparent"
+                 BorderBrush="{DynamicResource AccentBrush}"
+                 BorderThickness="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="{Binding Title}" 
+                                     FontSize="18" 
+                                     FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Description}" 
+                                     FontSize="14"
+                                     TextWrapping="Wrap"/>
+                        </StackPanel>
+                        <Button Grid.Column="1" 
+                                Content="+" 
+                                Click="AddProduct_Click"
+                                Tag="{Binding Id}"
+                                Style="{StaticResource RoundedButton}"
+                                Width="30" 
+                                Height="30"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Top"/>
+                        <Button Grid.Column="2" 
+                                Content="❌" 
+                                Click="DeleteButton_Click"
+                                Tag="{Binding Id}"
+                                Style="{StaticResource RoundedButton}"
+                                Width="30" 
+                                Height="30"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Top"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <!-- Кнопки для переключения контента -->
-        <StackPanel x:Name="ButtonPanel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,400,0,0" Orientation="Vertical">
-            <Button Content="{DynamicResource Add new list}" Style="{StaticResource RoundedButton}" Click="AddList_Click"/>
+        <StackPanel x:Name="ButtonPanel" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top" 
+                    Margin="0,600,0,0" 
+                    Orientation="Vertical">
+            <Button Content="{DynamicResource Add new list}" 
+                    Style="{StaticResource RoundedButton}" 
+                    Click="AddList_Click"/>
         </StackPanel>
+
     </Grid>
 </UserControl>
 

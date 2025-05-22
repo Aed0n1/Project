@@ -5,4 +5,5 @@
     <Color x:Key="PrimaryColor">#4CAF50</Color>
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#4CAF50"/>
     <SolidColorBrush x:Key="ButtonTextBrush" Color="White"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#4CAF50"/>
 </ResourceDictionary>

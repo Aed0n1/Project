@@ -85,7 +85,6 @@
                 Click="SaveButton_Click"/>
 
         </StackPanel>
-        <!-- Кнопка "Назад" -->
 
 
     </Grid>
