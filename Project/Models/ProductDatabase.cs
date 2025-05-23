@@ -8,10 +8,10 @@ namespace Project.Models
 {
     public class Product
     {
-        public string Id { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public string Type { get; set; } = string.Empty;
-        public string Barcode { get; set; } = string.Empty;
+        public required string Id { get; set; }
+        public required string Name { get; set; }
+        public required string Type { get; set; }
+        public required string Barcode { get; set; }
         public double Protein { get; set; }
         public double Fats { get; set; }
         public double Carbohydrates { get; set; }

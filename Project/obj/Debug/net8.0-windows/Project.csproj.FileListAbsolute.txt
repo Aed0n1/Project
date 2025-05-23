@@ -39,3 +39,4 @@ C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\CreateList
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Styles\TextBoxStyles.baml
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\AddProductToList.g.cs
 C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Views\AddProductToList.baml
+C:\Users\alexn\Desktop\Project\Project\obj\Debug\net8.0-windows\Styles\ComboBoxStyles.baml

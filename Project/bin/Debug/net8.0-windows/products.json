@@ -1,11 +1,22 @@
 [
   {
-    "Barcode": "8001234567890",
-    "Name": "Parmesan",
-    "Type": "Dairy",
-    "Protein": 23,
-    "Fats": 28,
-    "Carbohydrates": 0.5,
-    "Calories": 356
+    "Id": "01",
+    "Name": "Karyna",
+    "Type": "\uD83C\uDF4E Vegetables and Fruits",
+    "Barcode": "1",
+    "Protein": 1,
+    "Fats": 1,
+    "Carbohydrates": 1,
+    "Calories": 1
+  },
+  {
+    "Id": "02",
+    "Name": "Oleksii",
+    "Type": "\uD83C\uDF57 Protein Products",
+    "Barcode": "2",
+    "Protein": 1,
+    "Fats": 1,
+    "Carbohydrates": 1,
+    "Calories": 1
   }
 ]

@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace Project.Models
 {
-    public class ListItem
-    {
-        public string Id { get; set; } = string.Empty;
-        public string Title { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-    }
-
     public class JsonDatabase
     {
         private readonly string _filePath;
@@ -45,7 +38,6 @@ namespace Project.Models
                     }
                     catch (JsonException)
                     {
-                       
                         _items = new List<ListItem>();
                         SaveData().Wait();
                     }
@@ -96,7 +88,8 @@ namespace Project.Models
                 {
                     Id = newId,
                     Title = title,
-                    Description = description
+                    Description = description,
+                    Products = new List<ListProduct>()
                 };
 
                 _items.Add(item);
@@ -133,7 +126,7 @@ namespace Project.Models
             }
         }
 
-        public async Task<bool> UpdateItem(string id, string title, string description)
+        public async Task<bool> UpdateItem(string id, string title, List<ListProduct> products)
         {
             try
             {
@@ -141,7 +134,7 @@ namespace Project.Models
                 if (item != null)
                 {
                     item.Title = title;
-                    item.Description = description;
+                    item.Products = products;
                     await SaveData();
                     return true;
                 }

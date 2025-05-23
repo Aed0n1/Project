@@ -1,0 +1,12 @@
+[
+  {
+    "Id": "01",
+    "Name": "Typ",
+    "Type": "\uD83E\uDDC2 Fats and Oils",
+    "Barcode": "123123123123",
+    "Protein": 123,
+    "Fats": 123,
+    "Carbohydrates": 321,
+    "Calories": 123
+  }
+]
